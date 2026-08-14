@@ -1,52 +1,169 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pulizie</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iliad - Offerte</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #000 0%, #111 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23007BFF" opacity="0.3"/></svg>');
+            background-size: 100px 100px;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ccc;
+        }
+
+        .hero-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cards-section {
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .cards-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .cards-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            min-width: 250px;
+            height: 300px;
+            background-color: #007BFF;
+            border-radius: 15px;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .card-btn {
+            background-color: white;
+            color: #007BFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+    </style>
 </head>
-
 <body>
-
-  <!-- HERO -->
-  <header class="hero">
-    <nav class="navbar">
-      <div class="logo">LOGO</div>
-      <button class="cta-nav">Contattaci</button>
-    </nav>
-
-    <div class="hero-content">
-      <h1>Pulizie Professionali</h1>
-      <p>Servizi di qualità per la tua casa e azienda.</p>
-      <div class="sphere"></div>
-    </div>
-  </header>
-
-  <!-- CARD ILIAD STYLE -->
-  <section class="cards">
-    <div class="card">
-      <span class="tag">SERVIZIO TOP</span>
-      <h2>Pulizia Casa</h2>
-      <p class="desc">Professionale, veloce, impeccabile.</p>
-      <button class="card-btn">Prenota</button>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Le migliori offerte Iliad</h1>
+            <p>Scopri le promozioni esclusive per te</p>
+            <button class="hero-btn">Scopri di più</button>
+        </div>
     </div>
 
-    <div class="card">
-      <span class="tag">AZIENDE</span>
-      <h2>Uffici</h2>
-      <p class="desc">Pulizia profonda e costante.</p>
-      <button class="card-btn">Prenota</button>
+    <!-- Cards Section -->
+    <div class="cards-section">
+        <div class="cards-container">
+            <div class="card">
+                <h3>Piano Smart 5G</h3>
+                <p>Internet illimitato e chiamate senza limiti a soli 19,99€/mese.</p>
+                <button class="card-btn">Attiva ora</button>
+            </div>
+            <div class="card">
+                <h3>Fibra Ultraveloce</h3>
+                <p>Connessione in fibra ottica fino a 1 Gbps a 29,99€/mese.</p>
+                <button class="card-btn">Scopri</button>
+            </div>
+            <div class="card">
+                <h3>Promo Famiglia</h3>
+                <p>4 linee a 9,99€/mese ciascuna per 12 mesi.</p>
+                <button class="card-btn">Attiva</button>
+            </div>
+            <div class="card">
+                <h3>5G a Casa</h3>
+                <p>Internet senza fili con tecnologia 5G a 24,99€/mese.</p>
+                <button class="card-btn">Richiedi</button>
+            </div>
+        </div>
     </div>
-
-    <div class="card">
-      <span class="tag">SPECIALI</span>
-      <h2>Post Ristrutturazione</h2>
-      <p class="desc">Rimozione totale di polvere e residui.</p>
-      <button class="card-btn">Prenota</button>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
