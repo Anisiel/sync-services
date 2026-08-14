@@ -2,109 +2,51 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SyncClean</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #ffffff;
-      color: #000000;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    .container {
-      width: 90%;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    h1, h2 {
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
-    .hero {
-      margin-bottom: 60px;
-    }
-    .cta {
-      display: inline-block;
-      padding: 12px 22px;
-      background: #E60000;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      margin-top: 20px;
-    }
-    .box {
-      border: 1px solid #000;
-      padding: 20px;
-      margin: 30px 0;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #000;
-      margin-bottom: 20px;
-      font-size: 16px;
-      background: #fff;
-      color: #000;
-    }
-    button {
-      padding: 12px 22px;
-      background: #000;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #444;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulizie</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
+  <!-- HERO -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">LOGO</div>
+      <button class="cta-nav">Contattaci</button>
+    </nav>
 
-  <div class="hero">
-    <h1>SyncClean</h1>
-    <p>Il servizio che avvisa automaticamente le pulizie quando cambia una prenotazione.</p>
-    <a class="cta" href="#">Richiedi accesso →</a>
-  </div>
+    <div class="hero-content">
+      <h1>Pulizie Professionali</h1>
+      <p>Servizi di qualità per la tua casa e azienda.</p>
+      <div class="sphere"></div>
+    </div>
+  </header>
 
-  <h2>Come funziona</h2>
-  <p>Incolli il link iCal. Metti il numero WhatsApp del pulitore. Il sistema fa il resto.</p>
+  <!-- CARD ILIAD STYLE -->
+  <section class="cards">
+    <div class="card">
+      <span class="tag">SERVIZIO TOP</span>
+      <h2>Pulizia Casa</h2>
+      <p class="desc">Professionale, veloce, impeccabile.</p>
+      <button class="card-btn">Prenota</button>
+    </div>
 
-  <div class="box">
-    <strong>🧹 NUOVA PULIZIA</strong><br>
-    Appartamento: Roma Centro<br>
-    Check-out: 12/08 ore 10:00<br>
-    Check-in: 12/08 ore 15:00
-  </div>
+    <div class="card">
+      <span class="tag">AZIENDE</span>
+      <h2>Uffici</h2>
+      <p class="desc">Pulizia profonda e costante.</p>
+      <button class="card-btn">Prenota</button>
+    </div>
 
-  <h2>Per chi è</h2>
-  <p>Pensato per chi gestisce 1–10 appartamenti. Non è un gestionale. È una notifica automatica. E basta.</p>
+    <div class="card">
+      <span class="tag">SPECIALI</span>
+      <h2>Post Ristrutturazione</h2>
+      <p class="desc">Rimozione totale di polvere e residui.</p>
+      <button class="card-btn">Prenota</button>
+    </div>
+  </section>
 
-  <h2>Prezzo</h2>
-  <p><strong>9,90€ / mese</strong><br>Nessun vincolo.</p>
-
-  <h2>Richiedi accesso</h2>
-  <form>
-    <input type="text" placeholder="Nome">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Numero appartamenti">
-    <input type="text" placeholder="Link iCal (opzionale)">
-    <button>Invia richiesta →</button>
-  </form>
-
-  <footer>
-    Privacy · Contatti · SyncClean
-  </footer>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
